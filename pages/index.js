@@ -1,3 +1,4 @@
+import JokeForm from "@/components/JokeForm";
 import JokeList from "../components/JokeList";
 import useSWR from "swr";
 
@@ -30,11 +31,7 @@ export default function HomePage() {
 
   return (
     <>
-      <form onSubmit={handleCreate}>
-        <label htmlFor="joke">Create a new joke</label>
-        <input type="text" id="joke" name="joke" />
-        <button type="submit">Submit</button>
-      </form>
+      <JokeForm onSubmit={handleCreate} defaultValue={""} />
       <JokeList />
     </>
   );
